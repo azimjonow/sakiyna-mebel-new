@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin — Sakiyna Mebel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="admin.css"/>
+</head>
+<body>
+
+  <!-- ===== LOGIN ===== -->
+  <div id="loginScreen" class="login-screen">
+    <div class="login-card">
+      <div class="login-logo">Sakiyna <span>Mebel</span></div>
+      <p class="login-sub">Admin Panel</p>
+      <div class="login-form">
+        <input type="password" id="pwdInput" placeholder="Parolni kiriting" autocomplete="off"/>
+        <button id="loginBtn">Kirish</button>
+        <p class="login-err" id="loginErr"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ADMIN PANEL ===== -->
+  <div id="adminPanel" class="admin-panel hidden">
+
+    <header class="adm-hdr">
+      <div class="adm-logo">Sakiyna <span>Mebel</span> <em>/ Admin</em></div>
+      <div class="adm-hdr-btns">
+        <a href="index.html" target="_blank" class="adm-view-btn">&#127760; Saytni ko'rish</a>
+        <button id="logoutBtn" class="adm-logout">Chiqish</button>
+      </div>
+    </header>
+
+    <div class="adm-layout">
+
+      <aside class="adm-sidebar">
+        <button class="adm-nav active" data-tab="products">&#128230; Mahsulotlar</button>
+        <button class="adm-nav" data-tab="settings">&#9881; Sozlamalar</button>
+      </aside>
+
+      <main class="adm-main">
+
+        <!-- PRODUCTS TAB -->
+        <div class="adm-tab" id="tab-products">
+          <div class="tab-topbar">
+            <h2>Mahsulotlar <span id="prodCount" class="count-badge">0</span></h2>
+            <button class="btn-primary" id="addProductBtn">+ Yangi mahsulot</button>
+          </div>
+          <div id="prodList" class="prod-list"></div>
+        </div>
+
+        <!-- SETTINGS TAB -->
+        <div class="adm-tab hidden" id="tab-settings">
+          <h2>Sozlamalar</h2>
+          <div class="settings-grid">
+            <div class="set-card">
+              <h4>&#128222; Telefon raqamlari</h4>
+              <div class="set-field">
+                <label>Telefon 1</label>
+                <input type="text" id="set-phone1" placeholder="+998 99 387 00 17"/>
+              </div>
+              <div class="set-field">
+                <label>Telefon 2</label>
+                <input type="text" id="set-phone2" placeholder="+998 99 531 19 19"/>
+              </div>
+            </div>
+            <div class="set-card">
+              <h4>&#9992; Telegram</h4>
+              <div class="set-field">
+                <label>Buyurtma (shaxsiy)</label>
+                <div class="set-input-prefix">
+                  <span>@</span>
+                  <input type="text" id="set-tg" placeholder="az1mjonow"/>
+                </div>
+              </div>
+              <div class="set-field">
+                <label>Kanal (hero tugma)</label>
+                <div class="set-input-prefix">
+                  <span>@</span>
+                  <input type="text" id="set-tgch" placeholder="sakiyna_mebel"/>
+                </div>
+              </div>
+            </div>
+            <div class="set-card">
+              <h4>&#128274; Parol</h4>
+              <div class="set-field">
+                <label>Yangi parol</label>
+                <input type="password" id="set-pass" placeholder="Bo'sh qolsa o'zgarmaydi"/>
+              </div>
+              <div class="set-field">
+                <label>Tasdiqlash</label>
+                <input type="password" id="set-pass2" placeholder="Parolni qaytaring"/>
+              </div>
+            </div>
+          </div>
+          <button class="btn-primary" id="saveSettingsBtn">&#128190; Saqlash</button>
+          <div class="set-msg" id="setMsg"></div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ===== MODAL: Add / Edit Product ===== -->
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-hdr">
+        <h3 id="modalTitle">Yangi mahsulot</h3>
+        <button class="modal-x" id="modalClose">&#10005;</button>
+      </div>
+      <div class="modal-body">
+
+        <input type="hidden" id="pId"/>
+
+        <div class="mf-row">
+          <div class="mf-field">
+            <label>Nomi (UZ) <span class="req">*</span></label>
+            <input type="text" id="pNameUz" placeholder="masalan: Oq Oshxona"/>
+          </div>
+          <div class="mf-field">
+            <label>Nomi (RU)</label>
+            <input type="text" id="pNameRu" placeholder="masalan: Белая Кухня"/>
+          </div>
+        </div>
+
+        <div class="mf-field">
+          <label>Kategoriya <span class="req">*</span></label>
+          <select id="pCat">
+            <option value="oshxona">&#127859; Oshxona</option>
+            <option value="yotoqxona">&#128716; Yotoqxona</option>
+            <option value="shkaf">&#128193; Shkaf</option>
+          </select>
+        </div>
+
+        <div class="mf-field">
+          <label>Rasmlar <span class="req">*</span> <small>— rasm yuklang yoki img/ papkasidagi nom kiriting</small></label>
+          <div id="imgRows" class="img-rows"></div>
+          <button class="btn-add-img" id="addImgRow">+ Rasm qo'shish</button>
+        </div>
+
+      </div>
+      <div class="modal-ftr">
+        <button class="btn-ghost" id="modalCancel">Bekor qilish</button>
+        <button class="btn-primary" id="saveProductBtn">&#128190; Saqlash</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CONFIRM DELETE ===== -->
+  <div id="delOverlay" class="modal-overlay hidden">
+    <div class="modal-card sm">
+      <div class="modal-hdr">
+        <h3>O'chirishni tasdiqlang</h3>
+      </div>
+      <div class="modal-body">
+        <p>Bu mahsulotni o'chirsangiz qayta tiklash mumkin emas.</p>
+        <p class="del-name" id="delName"></p>
+      </div>
+      <div class="modal-ftr">
+        <button class="btn-ghost" id="delCancel">Bekor qilish</button>
+        <button class="btn-danger" id="delConfirm">Ha, o'chirish</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

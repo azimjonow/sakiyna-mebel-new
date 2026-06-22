@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html data-theme="dark" lang="uz">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sakiyna Mebel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="shortcut icon" href="img/favicon" type="image/x-icon">
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="ld-ring"></div>
+    <div class="ld-inner">
+      <div class="ld-logo">Sakiyna <span>Mebel</span></div>
+      <div class="ld-bar"><div class="ld-fill"></div></div>
+      <div class="ld-dots"><i></i><i></i><i></i></div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">Sakiyna <span>Mebel</span></a>
+      <div class="nav-links">
+        <a href="#catalog"  data-key="nav_catalog">Katalog</a>
+        <a href="#services" data-key="nav_services">Xizmatlar</a>
+        <a href="#whyus"    data-key="nav_whyus">Nega biz?</a>
+        <a href="#footer"   data-key="nav_contact">Bog'lanish</a>
+      </div>
+      <div class="nav-controls">
+        <div class="lang-sw">
+          <button class="lbtn active" data-lang="uz">UZ</button>
+          <span>|</span>
+          <button class="lbtn" data-lang="ru">RU</button>
+        </div>
+        <button class="tbtn" id="tbtn"><span id="ticon">&#9728;</span></button>
+        <a href="https://t.me/az1mjonow" target="_blank" rel="noopener" class="nav-order" data-key="nav_order">
+          &#128230; Buyurtma
+        </a>
+        <button class="nav-burger" id="navBurger" aria-label="Menyu">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mm-overlay" id="mmOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mm-top">
+      <span class="mm-logo">Sakiyna <span>Mebel</span></span>
+      <button class="mm-close" id="mmClose">&#10005;</button>
+    </div>
+    <nav class="mm-nav">
+      <a href="#catalog"  class="mm-link" data-key="nav_catalog">Katalog</a>
+      <a href="#services" class="mm-link" data-key="nav_services">Xizmatlar</a>
+      <a href="#whyus"    class="mm-link" data-key="nav_whyus">Nega biz?</a>
+      <a href="#footer"   class="mm-link" data-key="nav_contact">Bog'lanish</a>
+    </nav>
+    <div class="mm-lang">
+      <button class="lbtn active" data-lang="uz">UZ</button>
+      <span>|</span>
+      <button class="lbtn" data-lang="ru">RU</button>
+    </div>
+    <a href="https://t.me/az1mjonow" target="_blank" rel="noopener" class="mm-order" data-key="nav_order">&#128230; Buyurtma</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <canvas id="cvs"></canvas>
+    <div class="rings">
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="ring r3"></div>
+    </div>
+
+    <div class="hero-wrap">
+      <!-- Left: text -->
+      <div class="hero-text">
+        <div class="hero-badge" data-key="hero_badge">&#10022; Sifat va Zamonaviylik &#10022;</div>
+        <h1 class="hero-h1">
+          <span class="h1-line1" data-key="h1_line1">Uyingizni</span><br>
+          <em data-key="h1_line2">Bezash</em>
+          <span class="h1-small" data-key="h1_line3">vaqti keldi</span>
+        </h1>
+        <p class="hero-p" data-key="hero_desc">Oshxona, yotoqxona va shkaf — har bir mahsulot buyurtmaga asoslangan, professional sifatda tayyorlanadi.</p>
+
+        <div class="hero-trust">
+          <div class="trust-pill"><span>&#10003;</span> <span data-key="trust1">200+ Loyiha</span></div>
+          <div class="trust-pill"><span>&#10003;</span> <span data-key="trust2">Yetkazib berish</span></div>
+          <div class="trust-pill"><span>&#10003;</span> <span data-key="trust3">Kafolat</span></div>
+        </div>
+
+        <div class="hero-btns">
+          <a href="#catalog" class="btn-gold" data-key="hero_btn1">Katalogni ko'rish</a>
+          <a href="https://t.me/sakiyna_mebel" target="_blank" rel="noopener" class="btn-tg" data-key="hero_btn2">&#9992; Telegram</a>
+        </div>
+      </div>
+
+      <!-- Right: floating cards -->
+      <div class="hero-visual">
+        <div class="hv-card hv-c1">
+          <div class="hvc-img" style="background-image:url('img/photo_2026-06-22_11-14-48.jpg')"></div>
+          <div class="hvc-body">
+            <div class="hvc-cat" data-key="c_yotoqxona">Yotoqxona</div>
+            <div class="hvc-nm" data-key="hvc_nm1">Krem-Oltin Yotoqxona</div>
+          </div>
+        </div>
+        <div class="hv-card hv-c2">
+          <div class="hvc-img" style="background-image:url('img/oshxona%20oddiy.jpg')"></div>
+          <div class="hvc-body">
+            <div class="hvc-cat" data-key="c_oshxona">Oshxona</div>
+            <div class="hvc-nm" data-key="hvc_nm2">Oq Oshxona</div>
+          </div>
+        </div>
+        <div class="hv-card hv-c3">
+          <div class="hvc-img" style="background-image:url('img/photo_2026-06-22_11-14-42.jpg')"></div>
+          <div class="hvc-body">
+            <div class="hvc-cat" data-key="c_shkaf">Shkaf</div>
+            <div class="hvc-nm" data-key="hvc_nm3">Zamonaviy Shkaf</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Marquee strip -->
+    <div class="marquee-wrap">
+      <div class="marquee-inner">
+        <span data-key="mq1">&#10022; Oshxona meblari</span>
+        <span data-key="mq2">&#10022; Yotoqxona meblari</span>
+        <span data-key="mq3">&#10022; Shkaflar</span>
+        <span data-key="mq4">&#10022; Professional o'rnatish</span>
+        <span data-key="mq5">&#10022; Yetkazib berish</span>
+        <span data-key="mq6">&#10022; Kafolat xizmati</span>
+        <span data-key="mq1">&#10022; Oshxona meblari</span>
+        <span data-key="mq2">&#10022; Yotoqxona meblari</span>
+        <span data-key="mq3">&#10022; Shkaflar</span>
+        <span data-key="mq4">&#10022; Professional o'rnatish</span>
+        <span data-key="mq5">&#10022; Yetkazib berish</span>
+        <span data-key="mq6">&#10022; Kafolat xizmati</span>
+      </div>
+    </div>
+
+    <div class="scroll-ind"><div class="scroll-line"></div></div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-sec" id="stats">
+    <div class="container">
+      <div class="stats-row">
+        <div class="sbox anim-up">
+          <div class="snum" data-to="200" data-suf="+">200+</div>
+          <div class="slbl" data-key="stat1_lbl">Bajarilgan loyiha</div>
+        </div>
+        <div class="sbox anim-up" style="--d:.1s">
+          <div class="snum" data-to="5"   data-suf="+">5+</div>
+          <div class="slbl" data-key="stat2_lbl">Yillik tajriba</div>
+        </div>
+        <div class="sbox anim-up" style="--d:.2s">
+          <div class="snum" data-to="100" data-suf="%">100%</div>
+          <div class="slbl" data-key="stat3_lbl">Sifat kafolati</div>
+        </div>
+        <div class="sbox anim-up" style="--d:.3s">
+          <div class="snum" data-to="3"   data-suf="">3</div>
+          <div class="slbl" data-key="stat4_lbl">Yo'nalish</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section class="cat-sec" id="catalog">
+    <div class="container">
+      <div class="sec-hd anim-up">
+        <h2><span data-key="cat_h1">Bizning</span> <em data-key="cat_h2">Mahsulotlar</em></h2>
+        <p data-key="cat_sub">Har bir mahsulot — yuksak sifat va professional ish</p>
+      </div>
+      <div class="filters anim-up" style="--d:.1s">
+        <button class="fbtn active" data-filter="all"       data-key="f_all">Barchasi</button>
+        <button class="fbtn"        data-filter="oshxona"   data-key="f_kitchen">Oshxonalar</button>
+        <button class="fbtn"        data-filter="yotoqxona" data-key="f_bedroom">Yotoqxonalar</button>
+        <button class="fbtn"        data-filter="shkaf"     data-key="f_wardrobe">Shkaflar</button>
+      </div>
+      <div class="pgrid" id="pgrid"></div>
+      <div class="loadmore-wrap">
+        <button class="showless-btn" id="showLessBtn"></button>
+        <button class="loadmore-btn" id="loadMoreBtn"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-sec" id="services">
+    <div class="container">
+      <div class="sec-hd anim-up">
+        <h2><span data-key="srv_h1">Bizning</span> <em data-key="srv_h2">Xizmatlar</em></h2>
+        <p data-key="srv_sub">Professional yondashuv va yuqori sifat — har bir bosqichda</p>
+      </div>
+      <div class="srv-grid">
+        <div class="srv-card anim-up">
+          <div class="srv-icon">&#128297;</div>
+          <div class="srv-title" data-key="srv_t1">Mebel yasash</div>
+          <div class="srv-desc"  data-key="srv_d1">Har qanday o'lcham va rangda buyurtmaga asoslangan individual ishlab chiqarish</div>
+        </div>
+        <div class="srv-card anim-up" style="--d:.08s">
+          <div class="srv-icon">&#128663;</div>
+          <div class="srv-title" data-key="srv_t2">Yetkazib berish</div>
+          <div class="srv-desc"  data-key="srv_d2">Buyurtma tayyor bo'lgach, O'zbekiston bo'ylab tez va xavfsiz yetkazib berish</div>
+        </div>
+        <div class="srv-card anim-up" style="--d:.16s">
+          <div class="srv-icon">&#128736;</div>
+          <div class="srv-title" data-key="srv_t3">Professional o'rnatish</div>
+          <div class="srv-desc"  data-key="srv_d3">Tajribali ustalar tomonidan aniq va sifatli o'rnatish va sozlash</div>
+        </div>
+        <div class="srv-card anim-up" style="--d:.24s">
+          <div class="srv-icon">&#128200;</div>
+          <div class="srv-title" data-key="srv_t4">Dizayn maslahat</div>
+          <div class="srv-desc"  data-key="srv_d4">Xona o'lchamiga mos dizayn va rang kombinatsiyasini tanlashda bepul yordam</div>
+        </div>
+        <div class="srv-card anim-up" style="--d:.32s">
+          <div class="srv-icon">&#9989;</div>
+          <div class="srv-title" data-key="srv_t5">Kafolat xizmati</div>
+          <div class="srv-desc"  data-key="srv_d5">Barcha mahsulotlarga kafolat beriladi. Muammo bo'lsa — darhol hal qilamiz</div>
+        </div>
+        <div class="srv-card anim-up" style="--d:.40s">
+          <div class="srv-icon">&#128197;</div>
+          <div class="srv-title" data-key="srv_t6">Buyurtmaga tayyorlash</div>
+          <div class="srv-desc"  data-key="srv_d6">Foto va o'lchamingizni yuboring — kerakli mebel tayyorlanadi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="whyus-sec" id="whyus">
+    <div class="container">
+      <div class="sec-hd anim-up">
+        <h2><span data-key="why_h1">Nega</span> <em data-key="why_h2">Biz?</em></h2>
+        <p data-key="why_sub">Mijozlarimiz bizni qayta-qayta tanlashining sabablari</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card anim-up">
+          <div class="why-icon">&#11088;</div>
+          <div>
+            <div class="why-title" data-key="why_t1">Yuqori sifat</div>
+            <div class="why-desc"  data-key="why_d1">Faqat sertifikatlangan materiallar. Har bir buyurtma ishlab chiqarishdan oldin tekshiriladi</div>
+          </div>
+        </div>
+        <div class="why-card anim-up" style="--d:.08s">
+          <div class="why-icon">&#9201;</div>
+          <div>
+            <div class="why-title" data-key="why_t2">O'z vaqtida</div>
+            <div class="why-desc"  data-key="why_d2">Kelishilgan muddatda bajariladi. Kechikish bo'lmaydi — bu bizning qoidamiz</div>
+          </div>
+        </div>
+        <div class="why-card anim-up" style="--d:.16s">
+          <div class="why-icon">&#128104;&#8205;&#128295;</div>
+          <div>
+            <div class="why-title" data-key="why_t3">Tajribali jamoa</div>
+            <div class="why-desc"  data-key="why_d3">5+ yillik tajribaga ega professional ustalar va dizaynerlar jamoasi</div>
+          </div>
+        </div>
+        <div class="why-card anim-up" style="--d:.24s">
+          <div class="why-icon">&#128176;</div>
+          <div>
+            <div class="why-title" data-key="why_t4">Narx maqbul</div>
+            <div class="why-desc"  data-key="why_d4">Bozordagi eng yaxshi narx-sifat nisbati. Qo'shimcha xarajatsiz aniq narx beriladi</div>
+          </div>
+        </div>
+        <div class="why-card anim-up" style="--d:.32s">
+          <div class="why-icon">&#127775;</div>
+          <div>
+            <div class="why-title" data-key="why_t5">Individual dizayn</div>
+            <div class="why-desc"  data-key="why_d5">Sizning xohishingiz va xona o'lchamiga mos individual dizayn ishlab chiqiladi</div>
+          </div>
+        </div>
+        <div class="why-card anim-up" style="--d:.40s">
+          <div class="why-icon">&#128222;</div>
+          <div>
+            <div class="why-title" data-key="why_t6">Doim aloqada</div>
+            <div class="why-desc"  data-key="why_d6">Buyurtma berganingizdan tortib o'rnatilgunga qadar doimiy aloqa va xabar</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="footer">
+    <div class="ft-top">
+      <div class="container">
+        <div class="ft-cols">
+
+          <!-- Brand -->
+          <div class="ft-brand">
+            <div class="ft-logo">Sakiyna <span>Mebel</span></div>
+            <p class="ft-desc" data-key="ft_desc">Zamonaviy mebel ishlab chiqarish va sotish. Har bir buyurtma o'lcham va rangga qarab tayyorlanadi.</p>
+            <a href="https://t.me/az1mjonow" target="_blank" rel="noopener" class="tg-btn">&#9992; @az1mjonow</a>
+          </div>
+
+          <!-- Services -->
+          <div class="ft-services">
+            <h4 data-key="ft_services_h">Xizmatlar</h4>
+            <ul class="ft-list">
+              <li><span>&#10022;</span> <span data-key="srv1">Mebel yasash</span></li>
+              <li><span>&#10022;</span> <span data-key="srv2">Yetkazib berish</span></li>
+              <li><span>&#10022;</span> <span data-key="srv3">Professional o'rnatish</span></li>
+              <li><span>&#10022;</span> <span data-key="srv4">Kafolat ta'miri</span></li>
+              <li><span>&#10022;</span> <span data-key="srv5">Bepul maslahat</span></li>
+            </ul>
+          </div>
+
+          <!-- Contacts -->
+          <div class="ft-contacts">
+            <h4 data-key="footer_contact">Bog'lanish</h4>
+            <a href="tel:+998993870017" class="frow">
+              <span class="ficon">&#128222;</span>
+              <div>
+                <div class="flbl" data-key="fp1_lbl">Telefon 1</div>
+                <div class="fval">+998 99 387 00 17</div>
+              </div>
+            </a>
+            <a href="tel:+998995311919" class="frow">
+              <span class="ficon">&#128222;</span>
+              <div>
+                <div class="flbl" data-key="fp2_lbl">Telefon 2</div>
+                <div class="fval">+998 99 531 19 19</div>
+              </div>
+            </a>
+            <a href="https://t.me/az1mjonow" target="_blank" rel="noopener" class="frow tg">
+              <span class="ficon">&#9992;</span>
+              <div>
+                <div class="flbl">Telegram</div>
+                <div class="fval">@az1mjonow</div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <div class="container">
+        <p><strong>Sakiyna Mebel</strong> &copy; 2026 &mdash; <span data-key="footer_rights">Barcha huquqlar himoyalangan</span> &nbsp;<span id="adm-trig">⚙</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
